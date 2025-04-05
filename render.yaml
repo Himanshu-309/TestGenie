@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: testgenie-api
+    env: java
+    buildCommand: mvn clean install
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: PORT
+        value: 8080 
